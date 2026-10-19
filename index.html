@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Product Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <h1>Online Product Store</h1>
+
+      <a href="add-product.html" class="btn primary-btn">Add Product</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <div class="filter-group">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="availabilityFilter">Availability</label>
+        <select id="availabilityFilter">
+          <option value="all">All Products</option>
+          <option value="available">In Stock Only</option>
+          <option value="unavailable">Out of Stock Only</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="loading" class="loading hidden">Loading products...</div>
+
+    <div id="errorMessage" class="error-message hidden"></div>
+
+    <section id="productContainer" class="product-grid"></section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
